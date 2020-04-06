@@ -1,6 +1,5 @@
 # Lab
 
-Сеть состоящая из пяти слоев 
 
 Точность на тестовой выборке
 ![acc](https://github.com/Michael-99/Lab/raw/screenshots/_X4wNwwMc88.png "Точность на тестовой выборке") 
