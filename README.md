@@ -1,2 +1,2 @@
 # Lab
-![alt text](screenshots/_X4wNwwMc88
+![aсс](https://github.com/Michael-99/Lab/raw/screenshots/_X4wNwwMc88
