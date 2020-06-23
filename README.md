@@ -38,7 +38,7 @@
 ### Политика “предварительного разогрева” (Warm-Up)
  1)Пошаговое затухание  
 - [x] initial_lrate=0.0001
-- [x] drop=0.5
+- [x] drop=0.8
 - [x] epoch_drop=5
 
 ![exp](stepwarm1.PNG)
@@ -46,7 +46,7 @@
 
 2) Экспоненциальное затухание
 - [x] initial_lrate=0.0001
-- [x] k=0.5
+- [x] k=0.1
 ![exp](expwarm1.PNG)
 ![exp](expwarm2.PNG)
 
