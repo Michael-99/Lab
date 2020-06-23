@@ -7,6 +7,7 @@
 * Красный - lr=0.0001
 * Розовый -  lr=0.00001
 * Серый -  lr=0.000001
+
 ![lr](lr.PNG)
 
 #### Горизонтальное отражение
@@ -16,10 +17,10 @@
 ![lr](flip4.PNG)
 
 #### Поворот на случайный угол
-*Оранжевый - 15 
-*синий - 30
-*Красный - 45
-*Голубой - 90
+* Оранжевый - 15 
+* синий - 30
+* Красный - 45
+* Голубой - 90
 
 ![lr](rot1.PNG)
 ![lr](rot2.PNG)
@@ -27,17 +28,20 @@
 ![lr](rot4.PNG)
 
 #### Изменение яркости и контраста
-*Оранжевый
+* Оранжевый
 tf.image.random_brightness(image, 0.6, seed=None)
+
 image = tf.image.random_contrast(image, lower=0.3, upper=1.3, seed=None)    
 
-*синий
+* синий
 tf.image.random_brightness(image, 0.4, seed=None)
+
     image = tf.image.random_contrast(image, lower=0.3, upper=1.3, seed=None)    
 
-*красный
+* красный
 tf.image.random_brightness(image, 0.4, seed=None)
-    image = tf.image.random_contrast(image, lower=0.5, upper=1.5, seed=None)   
+
+   image = tf.image.random_contrast(image, lower=0.5, upper=1.5, seed=None)   
     
 ![lr](contr1.PNG)
 ![lr](contr2.PNG)
@@ -52,6 +56,12 @@ tf.image.random_brightness(image, 0.4, seed=None)
 *Голубой - размер участка 50 х 50 
 
 ![lr](crop.PNG)
+
+
+#### Использование всех оптимальных параметров
+
+![lr](all.PNG)
+
 
 
 
