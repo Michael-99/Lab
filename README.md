@@ -41,7 +41,7 @@
 - [x] drop=0.5
 - [x] epoch_drop=5
 
-![exp](warmstep1.PNG)
+![exp](stepwarm1.PNG)
 ![exp](stepwarm2.PNG)
 
 2) Экспоненциальное затухание
