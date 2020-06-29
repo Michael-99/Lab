@@ -16,7 +16,7 @@ from datetime import datetime
 
 LOG_DIR = './logs'
 SHUFFLE_BUFFER = 10
-BATCH_SIZE =100
+BATCH_SIZE =50
 NUM_CLASSES = 50
 PARALLEL_CALLS=4
 RESIZE_TO = 224
@@ -131,7 +131,7 @@ model.compile(
 log_dir='{}/xray-{}'.format(LOG_DIR, datetime.now())
 model.fit(
     (train_images, train_labels),
-    epochs=80,
+    epochs=60,
     steps_per_epoch=int(np.ceil(TRAINSET_SIZE / float(BATCH_SIZE))),
     callbacks=[
         tf.keras.callbacks.TensorBoard(log_dir),
