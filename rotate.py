@@ -1,16 +1,3 @@
-from google.colab import drive
-drive.mount('/content/drive')
-
-!ls "/content/drive/My Drive/"
-
-!ls "/content/drive/My Drive/xray/"
-
-# Commented out IPython magic to ensure Python compatibility.
-# %tensorflow_version 1.x
-
-# Commented out IPython magic to ensure Python compatibility.
-# %load_ext tensorboard
-
 import argparse
 import glob
 import numpy as np
@@ -21,9 +8,9 @@ from tensorflow.python.keras.callbacks import LearningRateScheduler
 from datetime import datetime
 import math
 
-LOG_DIR = './logs'
+LOG_DIR = '/content/drive/My Drive/lab4/rotation'
 SHUFFLE_BUFFER = 10
-BATCH_SIZE =100
+BATCH_SIZE =50
 NUM_CLASSES = 50
 PARALLEL_CALLS=4
 RESIZE_TO = 224
@@ -75,7 +62,7 @@ def create_augmented_dataset(filenames, batch_size):
         .prefetch(2 * batch_size)
 
 def augmented_train(image, label):
-    image = tf.contrib.image.rotate(image , 60 * math.pi / 180 , interpolation='NEAREST', name = None)
+    image = tf.contrib.image.rotate(image , 30 * math.pi / 180 , interpolation='NEAREST', name = None)
     return image,label
 
 class Validation(tf.keras.callbacks.Callback):
@@ -144,4 +131,4 @@ model.fit(
 
 #!rm -Rf logs/
 
-#%tensorboard --logdir logs
+#%tensorboard --logdir log
