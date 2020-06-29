@@ -68,7 +68,7 @@ def create_augmented_dataset(filenames, batch_size):
         .prefetch(2 * batch_size)
 
 def augmented_train(image, label):
-    image = tf.image.random_crop(image,[180,180,3], seed=None,name=None)
+    image = tf.image.random_crop(image,[150,150,3], seed=None,name=None)
     image = tf.image.resize_images(image,[224,224],
                                    method=tf.image.ResizeMethod.BILINEAR,
                                    align_corners=False,
