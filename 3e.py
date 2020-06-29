@@ -1,3 +1,4 @@
+
 from google.colab import drive
 drive.mount('/content/drive')
 
@@ -13,7 +14,7 @@ drive.mount('/content/drive')
 
 LOG_DIR = './lOGS'
 SHUFFLE_BUFFER = 10
-BATCH_SIZE = 100
+BATCH_SIZE = 50
 NUM_CLASSES = 50
 PARALLEL_CALLS=4
 RESIZE_TO = 224
@@ -97,7 +98,7 @@ train_images, train_labels = train_dataset.make_one_shot_iterator().get_next()
 train_labels = tf.one_hot(train_labels, NUM_CLASSES)
 
 model.compile(
-    optimizer=keras.optimizers.sgd(lr=0.005, momentum=0.9),
+    optimizer=keras.optimizers.sgd(lr=0.0001, momentum=0.9),
     loss=tf.keras.losses.categorical_crossentropy,
     metrics=[tf.keras.metrics.categorical_accuracy],
     target_tensors=[train_labels]
