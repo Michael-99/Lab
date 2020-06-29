@@ -13,10 +13,11 @@ import time
 from tensorflow.python import keras as keras
 from tensorflow.python.keras.callbacks import LearningRateScheduler
 from datetime import datetime
+import math
 
-LOG_DIR = './logs'
+LOG_DIR = '/content/drive/My Drive/lab4all'
 SHUFFLE_BUFFER = 10
-BATCH_SIZE =100
+BATCH_SIZE =40
 NUM_CLASSES = 50
 PARALLEL_CALLS=4
 RESIZE_TO = 224
@@ -69,10 +70,10 @@ def create_augmented_dataset(filenames, batch_size):
 
 def augmented_train(image, label):
     image = tf.image.random_flip_left_right(image)
-    image = tf.contrib.image.rotate(image , 60 * math.pi / 180 , interpolation='NEAREST', name = None)
-    image = tf.image.random_brightness(image, 0.5, seed=None)
-    image = tf.image.random_contrast(image, 0.2, 1.2, seed=None)
-    image = tf.image.random_crop(image,[120,120,3], seed=None,name=None)
+    image = tf.contrib.image.rotate(image , 90 * math.pi / 180 , interpolation='NEAREST', name = None)
+    image = tf.image.random_brightness(image, 0.4, seed=None)
+    image = tf.image.random_contrast(image, 0.5, 1.5, seed=None)
+    image = tf.image.random_crop(image,[150,150,3], seed=None,name=None)
     image = tf.image.resize_images(image,[224,224],
                                    method=tf.image.ResizeMethod.BILINEAR,
                                    align_corners=False,
